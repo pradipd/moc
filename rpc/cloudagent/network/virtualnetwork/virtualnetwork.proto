@@ -54,6 +54,9 @@ message Subnet {
 	repeated Route routes = 4;
 	IPAllocationMethod allocation = 5;
 	uint32 vlan = 6;
+	repeated string reserverdips = 7;
+	string vippoolstartip = 8;
+	string vippoolendip = 9;
 }
 message Ipam {
 	string type = 1;
