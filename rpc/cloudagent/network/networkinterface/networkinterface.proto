@@ -28,7 +28,7 @@ message IpConfiguration {
 	repeated string loadbalanceraddresspool = 5;
 	IPAllocationMethod allocation = 6;
 	string gateway = 7;
-	string networkname = 8;
+	string virtualnetworkname = 8;
 	string subnetname = 9;
 }
 

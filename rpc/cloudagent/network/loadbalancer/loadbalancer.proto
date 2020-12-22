@@ -38,7 +38,7 @@ message LoadBalancer {
 	string locationName = 9;
 	Status status = 10;
 	Tags tags = 11;
-	string networkname = 12;
+	string virtualnetworkname = 12;
 	string subnetname = 13;
 }
 
