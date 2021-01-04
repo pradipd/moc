@@ -23,7 +23,7 @@ message NetworkInterfaceResponse {
 message IpConfiguration {
 	string ipaddress = 1;
 	string prefixlength = 2;
-	string subnetid = 3;
+	string subnetidXXX = 3;
 	bool primary = 4;
 	repeated string loadbalanceraddresspool = 5;
 	IPAllocationMethod allocation = 6;

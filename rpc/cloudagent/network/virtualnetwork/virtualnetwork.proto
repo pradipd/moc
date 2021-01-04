@@ -49,7 +49,7 @@ message VirtualNetwork {
 
 message Subnet {
 	string name = 1;
-	string id = 2;
+	string idxxx = 2;
 	string cidr = 3;
 	repeated Route routes = 4;
 	IPAllocationMethod allocation = 5;
