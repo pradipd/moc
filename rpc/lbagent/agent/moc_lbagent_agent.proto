@@ -14,6 +14,7 @@ import "moc_common_notification.proto";
 message LoadBalancerRequest {
 	repeated LoadBalancer LoadBalancers = 1;
 	Operation OperationType = 2;
+	repeated string peers = 3;
 }
 
 message LoadBalancerResponse {
@@ -51,6 +52,15 @@ message LoadBalancerConfigResponse {
 	string config = 1;
 }
 
+message LoadBalancerPeerRequest {
+	repeated string peers = 1;
+}
+message LoadBalancerPeerResponse {
+	repeated string peers = 1;
+	google.protobuf.BoolValue Result = 2;
+	string  Error = 3;
+}
+
 service LoadBalancerAgent {
 	rpc Create(LoadBalancerRequest) returns (LoadBalancerResponse) {}
 	rpc Delete(LoadBalancerRequest) returns (LoadBalancerResponse) {}
@@ -58,5 +68,6 @@ service LoadBalancerAgent {
 	//GetConfig is for debugging/testing
 	rpc GetConfig(LoadBalancerConfigRequest) returns (LoadBalancerConfigResponse) {}
 	rpc CheckNotification(google.protobuf.Empty) returns (NotificationResponse) {}
+	rpc UpdatePeers(LoadBalancerPeerRequest) returns (LoadBalancerPeerResponse) {}
 }
 
